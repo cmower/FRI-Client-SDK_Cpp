@@ -45,8 +45,8 @@ set(
   ${FRI_LIB_SRC_DIR}/protobuf_gen/FRIMessages.pb.c
 )
 
-add_library(FRIClient
-  STATIC
+add_library(
+  FRIClient
   ${FRI_LIB_SRC_FILES}
 )
 
