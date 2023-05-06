@@ -12,6 +12,9 @@ if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
 endif()
 
+# Options
+option(FRI_BUILD_EXAMPLES "Build the example executables (Default ON)." ON)
+
 # Setup
 set(FRI_LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/fri)
 set(FRI_LIB_SRC_DIR ${FRI_LIB_DIR}/src)
@@ -23,9 +26,6 @@ if(EXISTS "${FRI_LIB_DIR}")
   execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory "${FRI_LIB_DIR}")
 endif()
 execute_process(COMMAND unzip -q ${CMAKE_CURRENT_SOURCE_DIR}/FRI-Client-SDK_Cpp_v2.5.zip -d ${FRI_LIB_DIR})
-
-# Options
-option(FRI_BUILD_EXAMPLES "Build the example executables (Default ON)." ON)
 
 # FRIClient library
 set(
