@@ -12,9 +12,18 @@ You can either use the options provided by KUKA or the `CMakeLists.txt` provided
 
 Unzip the FRI client SDK, and follow the instructions in the `Readme.txt` file.
 
-## Use our `CMakeLists.txt`
+## Use CMake
 
-1. Create a build directory: `$ mkdir build`
-2. Run cmake: `$ cmake -S /path/to/FRI-Client-SDK_Cpp -B /path/to/build`
-   - Note, optionally you can build the examples by using the flag `FRI_BUILD_EXAMPLES`.
-3. Build: `$ cmake --build /path/to/build`
+**Note**, you do not need to unzip the `FRI-Client-SDK_Cpp.zip` file (this is done automatically).
+
+1. Clone repo:
+   - (ssh) `$ git clone git@github.com:cmower/FRI-Client-SDK_Cpp.git`
+   - (https) `$ git clone https://github.com/cmower/FRI-Client-SDK_Cpp.git`
+2. Change directory: `$ cd FRI-Client-SDK_Cpp`
+3. Create a build directory: `$ mkdir build`
+4. Change directory: `$ cd build`
+5. Run cmake: `$ cmake ..`
+   - Note, optionally you can build the examples by using the flag `cmake -DFRI_BUILD_EXAMPLES=[ON/OFF] ..`. Default is `ON`.
+6. Build: `$ cmake --build .`
+
+The build directory now contains the built library `libFRIClient.a` and if `-DFRI_BUILD_EXAMPLES=ON` also the example executables.
