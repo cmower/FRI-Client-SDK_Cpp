@@ -26,6 +26,11 @@ if(NOT FRI_VERSION STREQUAL "1.15" AND NOT FRI_VERSION STREQUAL "2.5")
   message(FATAL_ERROR "FRI_VERSION must be set to either 1.15 or 2.5")
 endif()
 
+# Split the string into two parts
+string(REGEX MATCHALL "[0-9]+" FRI_VERSION_INT_PARTS ${FRI_VERSION})
+list(GET FRI_VERSION_INT_PARTS 0 FRI_VERSION_MAJOR)
+list(GET FRI_VERSION_INT_PARTS 1 FRI_VERSION_MINOR)
+
 option(FRI_BUILD_EXAMPLES "Build the example executables (Default ON)." ON)
 
 #######################################################################################
@@ -50,6 +55,10 @@ endif()
 set(FRI_ZIP_FILE ${CMAKE_CURRENT_SOURCE_DIR}/FRI-Client-SDK_Cpp_v${FRI_VERSION}.zip)
 execute_process(COMMAND unzip -q ${FRI_ZIP_FILE} -d ${FRI_LIB_DIR})
 message("Unzipped\n\t${FRI_ZIP_FILE}\n\tto\n\t${FRI_LIB_DIR}.")
+
+#######################################################################################
+# Setup FRI configuration file
+configure_file(fri_config.h.in ${FRI_LIB_DIR}/include/fri_config.h)
 
 #######################################################################################
 # FRIClient library

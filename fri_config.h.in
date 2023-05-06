@@ -1,0 +1,7 @@
+#ifndef FRI_CONFIG_H
+#define FRI_CONFIG_H
+
+// TODO: not keen on this as a solution, but for now it's fine
+#define FRI_VERSION ${FRI_VERSION_MAJOR}${FRI_VERSION_MINOR}
+
+#endif
