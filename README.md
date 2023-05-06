@@ -3,6 +3,14 @@
 This repo contains the FRI client SDK provided by KUKA.
 A cmake alternative for building the client and examples is provided to easily integrate it into other projects.
 
+# Support
+
+Currently the following versions of FRI are supported
+* 1.15
+* 2.5
+
+If you have a different version, please consider [forking](https://github.com/cmower/FRI-Client-SDK_Cpp/fork) and [submitting a pull request](https://github.com/cmower/FRI-Client-SDK_Cpp/pulls).
+
 # Build
 
 There are several options for building.
