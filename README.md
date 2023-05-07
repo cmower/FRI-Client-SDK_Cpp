@@ -9,7 +9,14 @@ A cmake alternative for building the client and examples is provided to easily i
 
 [@cmower](https://github.com/cmower) is not affiliated with KUKA.
 
-The two zip files are as provided by KUKA with the LRB robots, the code contained in them is unchanged.
+The two zip files
+- `FRI-Client-SDK_Cpp_v1.15.zip`
+- `FRI-Client-SDK_Cpp_v2.5.zip`
+are as provided by KUKA with LRB robots (both originally named `FRI-Client-SDK_Cpp.zip`).
+The code contained in each zip file is unchanged.
+
+When using the CMake build option (see instructions below), a file called `fri_config.h` is generated and copied to the unzipped `fri/include/` directory so it is publically available.
+This does not affect the code provided by KUKA in any way, it is simply there to specify a MACRO called `FRI_VERSION` which is used to indicate the version of FRI being built.
 
 # Support
 
