@@ -3,6 +3,14 @@
 This repo contains the FRI client SDK provided by KUKA for LBR models.
 A cmake alternative for building the client and examples is provided to easily integrate it into other projects.
 
+# Important notice
+
+**THIS IS NOT A KUKA PRODUCT.**
+
+[@cmower](https://github.com/cmower) is not affiliated with KUKA.
+
+The two zip files are as provided by KUKA with the LRB robots, the code contained in them is unchanged.
+
 # Support
 
 The following versions of FRI are currently supported:
