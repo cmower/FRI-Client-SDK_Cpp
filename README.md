@@ -12,6 +12,7 @@ A cmake alternative for building the client and examples is provided to easily i
 The two zip files
 - `FRI-Client-SDK_Cpp_v1.15.zip`
 - `FRI-Client-SDK_Cpp_v2.5.zip`
+
 are as provided by KUKA with LRB robots (both originally named `FRI-Client-SDK_Cpp.zip`).
 The code contained in each zip file is unchanged.
 
