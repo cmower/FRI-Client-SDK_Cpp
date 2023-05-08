@@ -3,6 +3,8 @@
 This repo contains the FRI client SDK provided by KUKA for LBR models.
 A cmake alternative for building the client and examples is provided to easily integrate it into other projects.
 
+To browse the source code for the `FRI-Client-SDK_Cpp_v*.zip` files, see the other branches of this repository.
+
 # Important notice
 
 **THIS IS NOT A KUKA PRODUCT.**
