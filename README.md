@@ -54,3 +54,10 @@ Unzip the FRI client SDK, and follow the instructions in the `Readme.txt` file.
 6. Build: `$ cmake --build .`
 
 The build directory now contains the built library `libFRIClient.a` and if `-DFRI_BUILD_EXAMPLES=ON` also the example executables.
+
+# Usage
+
+## Java application
+
+A flexible Java application is provided [here](java/LBRServer.java).
+This must be installed on the KUKA Sunrise controller.
