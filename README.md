@@ -59,5 +59,5 @@ The build directory now contains the built library `libFRIClient.a` and if `-DFR
 
 ## Java application
 
-A flexible Java application is provided [here](java/LBRServer.java).
+A flexible Java application is provided [here](https://github.com/cmower/LBR-Java-app).
 This must be installed on the KUKA Sunrise controller.
