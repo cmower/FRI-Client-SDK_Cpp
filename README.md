@@ -42,6 +42,8 @@ Unzip the FRI client SDK, and follow the instructions in the `Readme.txt` file.
 
 **Note**, you do not need to unzip the `.zip` file (this is done automatically).
 
+### Linux (only tested on Ubuntu 20.04)
+
 1. Clone repo:
    - (ssh) `$ git clone git@github.com:cmower/FRI-Client-SDK_Cpp.git`
    - (https) `$ git clone https://github.com/cmower/FRI-Client-SDK_Cpp.git`
@@ -54,6 +56,26 @@ Unzip the FRI client SDK, and follow the instructions in the `Readme.txt` file.
 6. Build: `$ cmake --build .`
 
 The build directory now contains the built library `libFRIClient.a` and if `-DFRI_BUILD_EXAMPLES=ON` also the example executables.
+
+### Windows (only tested on Windows 10)
+
+First ensure you have the following installed on your system:
+* [C/C++ development tools for Visual Studio](https://visualstudio.microsoft.com/vs/features/cplusplus/)
+* [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)
+
+1. Run Windows Terminal as administrator and change directory to somewhere appropriate.
+2. Clone repo:
+   - (ssh) `$ git clone git@github.com:cmower/FRI-Client-SDK_Cpp.git`
+   - (https) `$ git clone https://github.com/cmower/FRI-Client-SDK_Cpp.git`
+3. Change directory: `$ cd FRI-Client-SDK_Cpp`
+4. Create a build directory: `$ mkdir build`
+5. Change directory: `$ cd build`
+6. Run cmake: `$ cmake "-DFRI_VERSION=1.15" ..`
+   - You **must** specify the FRI version that you want to build. See the "*Support*" section above for supported versions.
+   - Note, optionally you can build the examples by using the flag `cmake -DFRI_BUILD_EXAMPLES=[ON/OFF] ..`. Default is `ON`.
+7. Build: `$ cmake --build .`
+
+The `Debug` directory contains the build library file for `FRIClient` and also the example `.exe` files.
 
 # Usage
 

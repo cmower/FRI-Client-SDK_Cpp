@@ -123,19 +123,30 @@ target_include_directories(
   ${FRI_LIB_SRC_DIR}/protobuf_gen
 )
 
-target_compile_options(FRIClient
-  PRIVATE
-  -O2
-  -Wall
-  -DHAVE_SOCKLEN_T
-  -DPB_SYSTEM_HEADER="pb_syshdr.h"
-  -DPB_FIELD_16BIT
-  -DHAVE_STDINT_H
-  -DHAVE_STDDEF_H
-  -DHAVE_STDBOOL_H
-  -DHAVE_STDLIB_H
-  -DHAVE_STRING_H
-)
+if(MSVC)
+    target_compile_options(FRIClient
+        PRIVATE
+            -DPB_SYSTEM_HEADER="pb_syshdr_win.h"
+            -DPB_FIELD_16BIT
+            -DWIN32
+            -DHAVE_STDINT_H
+            -DHAVE_STDBOOL_H
+    )
+else()
+    target_compile_options(FRIClient
+        PRIVATE
+            -O2
+            -Wall
+            -DHAVE_SOCKLEN_T
+            -DPB_SYSTEM_HEADER="pb_syshdr.h"
+            -DPB_FIELD_16BIT
+            -DHAVE_STDINT_H
+            -DHAVE_STDDEF_H
+            -DHAVE_STDBOOL_H
+            -DHAVE_STDLIB_H
+            -DHAVE_STRING_H
+    )
+endif()
 
 # Examples
 function(build_example name)
