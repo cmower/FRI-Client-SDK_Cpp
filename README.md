@@ -79,6 +79,25 @@ The `Debug` directory contains the build library file for `FRIClient` and also t
 
 # Usage
 
+## Connection
+
+Depending on the setup for your KUKA Sunrise controller, you may need to create a connection.
+
+### Ubuntu
+
+1. Navigate to wired settings.
+2. Create a new manual connection with your required IP/Netmask.
+
+### Windows
+
+1. Navigate: Control Pannel > Network and Internet > Network and Sharing Center
+2. Plug in the ethernet to your laptop/PC.
+3. Click on "Set up a new connection or network"
+4. Select "Manually connect to a wireless network" and click "Next"
+5. Give the network an appropriate name, select "No authentification (Open)" for "Security type", and select "Start this connection automatically". Then click "Next".
+6. 
+
+
 ## Java application
 
 A flexible Java application is provided [here](https://github.com/cmower/LBR-Java-app).
